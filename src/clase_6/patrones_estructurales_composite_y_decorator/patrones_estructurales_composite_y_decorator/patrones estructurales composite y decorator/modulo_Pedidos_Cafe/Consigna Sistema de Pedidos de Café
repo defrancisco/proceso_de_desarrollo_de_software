@@ -1,0 +1,12 @@
+### Ejemplo: Sistema de Pedidos de Café
+
+Se desea desarrollar un módulo para una cafetería que permita calcular el precio de las bebidas de
+forma flexible.
+• Bebida Base: Existe una bebida básica (por ejemplo, "Café Simple") que tiene un nombre y un
+precio base.
+• Adicionales (Decoradores): Los clientes pueden añadir distintos ingredientes extra a su café,
+como Leche, Azúcar o Chocolate.
+• Dinámica de Costos:Cada adicional tiene un costo extra que se suma al precio de la bebida.
+• Combinaciones: Un cliente puede pedir un café con leche, o un café con leche y chocolate, o
+incluso un café con doble de azúcar. El sistema debe permitir "envolver" la bebida con tantos
+adicionales como el cliente desee, calculando el precio final de forma acumulativa

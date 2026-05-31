@@ -1,0 +1,12 @@
+
+Diseño de la Solución
+
+**Patrón Strategy (Comportamiento):**
+Motivación: Cada cliente tiene un medio de notificación preferido (WhatsApp, SMS, Email).
+El patrón Strategy nos permite encapsular estas distintas formas de enviar la notificación y decidir en tiempo de ejecución cuál usar dependiendo de la configuración del cliente.
+Componentes: Tendremos una interfaz EstrategiaNotificacion y clases concretas como NotificacionWhatsApp, NotificacionSMS y NotificacionEmail.
+
+**Patrón Adapter (Estructural):**
+Motivación: El enunciado indica explícitamente que Twilio (para WhatsApp y SMS) o la biblioteca de Email podrían ser reemplazados en el futuro.
+
+El Adapter encapsula las llamadas a estas dependencias externas , permitiéndonos programar contra una interfaz propia (nuestro dominio) en lugar de acoplarnos a código de terceros.

@@ -1,0 +1,10 @@
+Patrón Composite (Estructura de Árbol):
+El enunciado indica que «existen productos simples, sino que también existen combos...
+También pueden existir combos de combos».
+Esta relación de tipo "parte-todo" donde un elemento puede contener elementos simples o compuestos de forma recursiva es la definición exacta del patrón Composite.
+Por lo tanto, el Combo NO es un Decorador, sino el objeto Compuesto.
+
+Patrón Decorator (Envoltorios Dinámicos):
+El enunciado menciona que se pueden aplicar descuentos acumulables y distintos packagings que alteran el precio final.
+Dado que estas responsabilidades se añaden de forma dinámica e individual (un producto o un combo entero pueden tener o no packaging/descuento),
+aquí es donde aplicamos el patrón Decorator.
