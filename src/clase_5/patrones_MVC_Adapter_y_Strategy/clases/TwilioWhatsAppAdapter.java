@@ -1,6 +1,6 @@
-package clase_5.clases;
+package clase_5.patrones_MVC_Adapter_y_Strategy.clases;
 
-import clase_5.interfaces.IWhatsAppAdapter;
+import clase_5.patrones_MVC_Adapter_y_Strategy.interfaces.*;
 
 // Clases de Adapters Concretos (Simulamos la conexión a las APIs externas)
 public class TwilioWhatsAppAdapter implements IWhatsAppAdapter {

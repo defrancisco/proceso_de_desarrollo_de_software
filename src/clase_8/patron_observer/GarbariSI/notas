@@ -1,0 +1,10 @@
+
+
+Utiliza dos patrones de diseño
+
+Observer "interés para determinado sujeto, se debe notificar si pasa algo"
+
+- Observers: Oficina Contable, Depósito y Contador de Ventas
+
+Strategy "deben aplicar algunos impuestos por tipo de producto"; dependiendo lo que haya es un IVA diferente
+

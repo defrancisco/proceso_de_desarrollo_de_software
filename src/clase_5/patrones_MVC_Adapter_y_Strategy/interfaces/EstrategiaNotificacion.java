@@ -1,7 +1,6 @@
-package clase_5.interfaces;
+package clase_5.patrones_MVC_Adapter_y_Strategy.interfaces;
 
-import clase_5.clases.Cliente;
-import clase_5.clases.Mensaje;
+import clase_5.patrones_MVC_Adapter_y_Strategy.clases.*;
 
 // Mi interfaz de patrón Strategy
 public interface EstrategiaNotificacion {

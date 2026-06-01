@@ -1,7 +1,6 @@
-package clase_5.clases;
+package clase_5.patrones_MVC_Adapter_y_Strategy.clases;
 
-import clase_5.interfaces.EstrategiaNotificacion;
-import clase_5.interfaces.IEmailAdapter;
+import clase_5.patrones_MVC_Adapter_y_Strategy.interfaces.*;
 
 public class NotificacionEmail implements EstrategiaNotificacion {
     private IEmailAdapter adapter;
@@ -11,7 +10,7 @@ public class NotificacionEmail implements EstrategiaNotificacion {
     }
 
     @Override
-    public void enviar(clase_5.clases.Mensaje mensaje, clase_5.clases.Cliente cliente) {
+    public void enviar(Mensaje mensaje,Cliente cliente) {
         adapter.enviarEmail(cliente.getEmail(), mensaje.getMensaje());
     }
 }

@@ -1,6 +1,6 @@
-package clase_5.clases;
+package clase_5.patrones_MVC_Adapter_y_Strategy.clases;
 
-import clase_5.interfaces.EstrategiaNotificacion;
+import clase_5.patrones_MVC_Adapter_y_Strategy.interfaces.*;
 
 public class Cliente {
     private String nombre;

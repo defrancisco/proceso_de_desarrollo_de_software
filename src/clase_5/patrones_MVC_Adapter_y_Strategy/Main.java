@@ -1,21 +1,11 @@
-package clase_5;
+package clase_5.patrones_MVC_Adapter_y_Strategy;
 
 
-import clase_5.clases.*;
-import clase_5.clases.Cliente;
-import clase_5.clases.JavaMailAdapter;
-import clase_5.clases.Mensaje;
-import clase_5.clases.ModuloNotificaciones;
-import clase_5.clases.NotificacionEmail;
-import clase_5.clases.NotificacionSMS;
-import clase_5.clases.NotificacionWhatsApp;
-import clase_5.clases.TwilioSMSAdapter;
-import clase_5.clases.TwilioWhatsAppAdapter;
-import clase_5.interfaces.*;
-import clase_5.interfaces.EstrategiaNotificacion;
-import clase_5.interfaces.IEmailAdapter;
-import clase_5.interfaces.ISMSAdapter;
-import clase_5.interfaces.IWhatsAppAdapter;
+import clase_5.patrones_MVC_Adapter_y_Strategy.clases.*;
+import clase_5.patrones_MVC_Adapter_y_Strategy.interfaces.EstrategiaNotificacion;
+import clase_5.patrones_MVC_Adapter_y_Strategy.interfaces.IEmailAdapter;
+import clase_5.patrones_MVC_Adapter_y_Strategy.interfaces.ISMSAdapter;
+import clase_5.patrones_MVC_Adapter_y_Strategy.interfaces.IWhatsAppAdapter;
 
 
 public class Main {
