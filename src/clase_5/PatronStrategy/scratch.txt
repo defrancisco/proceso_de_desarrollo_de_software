@@ -1,0 +1,9 @@
+
+Tienes un sistema de facturación en un e-commerce.
+El usuario llega al carrito de compras y necesita pagar. Puede elegir pagar con Tarjeta de Crédito, con PayPal o en Efectivo.
+No queremos llenar nuestra clase principal con decenas de condicionales if-else o un switch gigante, ya que si mañana agregamos Criptomonedas,
+tendríamos que modificar código existente (violando el principio Open/Closed de SOLID).
+
+El Objetivo de Strategy:
+Intercambiar el algoritmo de cobro en tiempo de ejecución de manera dinámica, sin que el contexto (la caja registradora) sepa los detalles
+internos de cómo funciona cada pago.

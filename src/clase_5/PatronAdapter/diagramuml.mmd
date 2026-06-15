@@ -1,0 +1,23 @@
+classDiagram
+    class AppClimaArgentina {
+        +mostrarClima(MedidorTemperatura medidor)
+    }
+
+    class MedidorTemperatura {
+        <<interface>>
+        +obtenerTemperaturaCelsius() double
+    }
+
+    class ApiClimaEEUU {
+        <<Externa / Incompatible>>
+        +getTemperatureFahrenheit() double
+    }
+
+    class AdapterClimaEEUU {
+        -ApiClimaEEUU apiNorteamericana
+        +obtenerTemperaturaCelsius() double
+    }
+
+    AppClimaArgentina ..> MedidorTemperatura : usa
+    MedidorTemperatura <|.. AdapterClimaEEUU : implementa
+    AdapterClimaEEUU --> ApiClimaEEUU : adapta / envuelve

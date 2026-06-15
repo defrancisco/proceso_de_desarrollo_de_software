@@ -1,0 +1,10 @@
+Estás desarrollando una aplicación del clima para Argentina. Tu sistema de dominio central espera recibir
+la temperatura estrictamente en Grados Celsius. Sin embargo, la empresa decidió comprar los datos del clima a una
+API de Estados Unidos extremadamente precisa, pero que tiene dos problemas: primero, devuelve los datos en Fahrenheit;
+segundo, los nombres de sus métodos están en inglés y no coinciden con las interfaces de tu sistema.
+
+No tienes permiso ni acceso para modificar el código de la API de Estados Unidos porque es una librería compilada de un tercero.
+
+El Objetivo de Adapter:
+Crear una clase "Envoltorio" (Wrapper/Adapter) que hable el mismo idioma que tu aplicación (Celsius),
+pero que por dentro se comunique con la API externa, traduciendo los nombres de los métodos y convirtiendo los datos de Fahrenheit a Celsius.
