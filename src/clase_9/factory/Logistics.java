@@ -1,7 +1,9 @@
 package clase_9.factory;
 
+import clase_9.factory.Transport;
+
 //CREADOR ABSTRACTO
-abstract class Logistics {
+public abstract class Logistics {
  
  // Este es el FACTORY METHOD original
  public abstract Transport createTransport();
