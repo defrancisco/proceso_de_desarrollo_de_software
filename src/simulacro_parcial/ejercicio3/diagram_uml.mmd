@@ -1,0 +1,29 @@
+classDiagram
+    class Sujeto {
+        <<interface>>
+        +agregar(o: Observador)
+        +eliminar(o: Observador)
+        +notificar()
+    }
+
+    class Observador {
+        <<interface>>
+        +actualizar(marea: float)
+    }
+
+    class Estacion {
+        -List~Observador~ observadores
+        -float marea
+        +agregar(o: Observador)
+        +eliminar(o: Observador)
+        +notificar()
+        +setMarea(nuevaMarea: float)
+    }
+
+    class Buque {
+        +actualizar(marea: float)
+    }
+
+    Sujeto <|.. Estacion
+    Observador <|.. Buque
+    Estacion o--> Observador : tiene una lista de

@@ -1,13 +1,14 @@
 package simulacro_parcial.ejercicio3;
 
 import simulacro_parcial.ejercicio3.Observador;
-import ejercicio3.Sujeto;
 
 import java.util.ArrayList;
 import java.util.List;
 
+// mi clase contexto
+
 public class Estacion implements Sujeto {
-    private List<Observador> observadores = new ArrayList<Observador>();
+    private List<Observador> observadores = new ArrayList<Observador>(); // lista de observadores
     private float marea;
 
     public Estacion(float marea) {
