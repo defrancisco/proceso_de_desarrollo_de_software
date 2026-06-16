@@ -1,4 +1,5 @@
-package clase;
+package clase_10.modulo_flip_flop;
+
 
 import java.util.ArrayList;
 import java.util.List;

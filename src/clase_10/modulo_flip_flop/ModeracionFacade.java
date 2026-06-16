@@ -1,4 +1,5 @@
-package clase;
+package clase_10.modulo_flip_flop;
+
 
 /**
  * Fachada unificada que simplifica el complejo motor interno de FlipFlop. 

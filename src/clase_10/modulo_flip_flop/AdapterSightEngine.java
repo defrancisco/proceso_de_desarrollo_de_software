@@ -1,4 +1,5 @@
-package clase;
+package clase_10.modulo_flip_flop;
+
 
 // Simula la llamada a la API externa de SightEngine 
 public class AdapterSightEngine implements IAdapterModerarTexto {

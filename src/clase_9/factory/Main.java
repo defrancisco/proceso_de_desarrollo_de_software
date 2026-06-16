@@ -1,9 +1,6 @@
 package clase_9.factory;
 
-import clase_9.factory.factory_method.EarthLogistics;
-import clase_9.factory.factory_method.Logistics;
-import clase_9.factory.factory_method.RoadLogistics;
-import clase_9.factory.factory_method.SeaLogistics;
+
 
 public class Main {
     public static void main(String[] args) {

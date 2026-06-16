@@ -1,4 +1,5 @@
-package clase;
+package clase_10.modulo_flip_flop;
+
 
 // Simula la llamada a la API externa de Modraptor
 public class AdapterModRaptor implements IAdapterModerarImagen {

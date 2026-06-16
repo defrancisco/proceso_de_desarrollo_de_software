@@ -1,4 +1,5 @@
-package clase;
+package clase_10.modulo_flip_flop;
+
 
 // El Contexto del patrón Strategy
 public class Moderador {
