@@ -9,16 +9,16 @@ public class Ejercicio2 {
 
     // Clase Contexto
     public class PedidoContext {
-        private EstadoPedido estadoActual;
+        private EstadoPedido estadoActual; // Cambiado a private
         private String codigoSeguridad;
 
         public PedidoContext(String codigo) {
             this.codigoSeguridad = codigo;
-            this.estadoActual = new EstadoCreado();
+            this.estadoActual = new EstadoCreado(); // Estado inicial
         }
 
-        public void ejecutarOperacion() {this.estadoActual.procesarEnvio(this);}
-        public void cancelarPedido() {this.estadoActual.cancelar(this);}
+        public void ejecutarOperacion() { this.estadoActual.procesarEnvio(this); }
+        public void cancelarPedido() { this.estadoActual.cancelar(this); }
 
         public void setEstado(EstadoPedido nuevoEstado) {
             this.estadoActual = nuevoEstado;
