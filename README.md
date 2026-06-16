@@ -25,6 +25,7 @@ A continuación, el listado de patrones practicados en este repositorio, dividid
 * **Adapter:** Permite que interfaces incompatibles trabajen juntas (ej. integraciones con APIs externas como Twilio).
 * **Composite:** Compone objetos en estructuras de árbol para representar jerarquías (parte-todo). Permite tratar objetos individuales y composiciones de manera uniforme (ej. Módulo de Menús o Categorías de Productos).
 * **Decorator:** Añade responsabilidades u opciones adicionales a un objeto dinámicamente, envolviéndolo (ej. Módulo de Stock y Precios, Café con adicionales).
+* **Facade:** Proporciona una interfaz simple y unificada para acceder a un subsistema complejo o a un conjunto de clases/APIs de terceros, ocultando toda su complejidad y reduciendo el acoplamiento (ej. Módulo Exportador o la unificación de los motores de moderación de IA).
 
 ### ⚙️ Comportamiento
 * **Strategy:** Define una familia de algoritmos, los encapsula y los hace intercambiables en tiempo de ejecución (ej. Métodos de pago o envío de notificaciones).
