@@ -1,0 +1,30 @@
+classDiagram
+
+
+    class ItemMenu {
+        <<interface>>
+        +getPrecio() double
+        +getNombre() String
+    }
+
+    class MenuEjecutivo{
+        +items List<ItemMenu>
+        ++precio double
+
+        +agregar(ItemMenu item)
+        +remover(ItemMenu item)
+
+    }
+
+
+    class PlatoIndividual {
+        +nombre String
+        +precio double
+       +getPrecio() double
+        +getNombre() String
+    }
+
+    ItemMenu ..> PlatoIndividual
+    ItemMenu ..> MenuEjecutivo : contiene
+    MenuEjecutivo ..> ItemMenu
+

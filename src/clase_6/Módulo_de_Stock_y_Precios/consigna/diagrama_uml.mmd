@@ -1,0 +1,56 @@
+classDiagram
+    %% 1. Interfaz Común
+    class Vendible {
+        <<interface>>
+        +getDescripcion() String
+        +getPrecio() double
+        +getStock() int
+    }
+
+    %% 2. Hoja (Leaf)
+    class ProductoSimple {
+        -nombre: String
+        -precio: double
+        -stock: int
+        +getDescripcion() String
+        +getPrecio() double
+        +getStock() int
+    }
+
+    %% 3. Compuesto (Composite)
+    class Combo {
+        -nombre: String
+        -items: List~Vendible~
+        +agregarItem(item: Vendible)
+        +eliminarItem(item: Vendible)
+        +getPrecio() double
+        +getStock() int
+    }
+
+    %% 4. Decorador Abstracto
+    class VendibleDecorator {
+        <<abstract>>
+        #envuelto: Vendible
+        +getDescripcion() String
+        +getPrecio() double
+        +getStock() int
+    }
+
+    %% 5. Decoradores Concretos
+    class DescuentoDecorator {
+        -porcentaje: double
+        +getPrecio() double
+    }
+
+    class PackagingDecorator {
+        -costoCaja: double
+        +getPrecio() double
+    }
+
+    ProductoSimple ..|> Vendible
+    Combo ..|> Vendible
+    VendibleDecorator ..|> Vendible
+    Combo o-- Vendible : contiene
+    VendibleDecorator o-- Vendible : envuelve
+    DescuentoDecorator --|> VendibleDecorator
+    PackagingDecorator --|> VendibleDecorator
