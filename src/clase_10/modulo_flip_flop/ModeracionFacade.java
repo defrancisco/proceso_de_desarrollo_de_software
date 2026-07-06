@@ -1,6 +1,15 @@
 package clase_10.modulo_flip_flop;
 
 
+import clase_10.modulo_flip_flop.adapter.imagenes.AdapterModRaptor;
+import clase_10.modulo_flip_flop.adapter.imagenes.IAdapterModerarImagen;
+import clase_10.modulo_flip_flop.adapter.textos.AdapterSightEngine;
+import clase_10.modulo_flip_flop.adapter.textos.IAdapterModerarTexto;
+import clase_10.modulo_flip_flop.strategy.EstrategiaModeracion;
+import clase_10.modulo_flip_flop.strategy.Moderador;
+import clase_10.modulo_flip_flop.strategy.ModerarImagen;
+import clase_10.modulo_flip_flop.strategy.ModerarTexto;
+
 /**
  * Fachada unificada que simplifica el complejo motor interno de FlipFlop. 
  */

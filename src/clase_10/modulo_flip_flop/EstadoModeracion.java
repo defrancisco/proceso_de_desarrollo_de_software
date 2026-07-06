@@ -1,6 +1,8 @@
 package clase_10.modulo_flip_flop;
 
 
+import clase_10.modulo_flip_flop.observer.Accionable;
+
 import java.util.ArrayList;
 import java.util.List;
 

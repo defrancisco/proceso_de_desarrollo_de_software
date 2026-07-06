@@ -1,5 +1,7 @@
 package clase_10.modulo_exportador_facade;
 
+import clase_10.modulo_exportador_facade.strategy.IEstrategiaDeExportacion;
+
 import java.util.List;
 import java.util.Map;
 

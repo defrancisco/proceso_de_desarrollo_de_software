@@ -1,0 +1,8 @@
+Patrones de Diseño / Singleton
+Se sugiere su utilización cuando:
+• Serequieretener unaúnica instancia de unaclase yque la misma sea accesible por terceros
+
+Componentes:
+• Clase Singleton: Clase que permitirá que sea instanciada una única vez a través de un método de
+clase. El constructor debe ser privado para que sea accesible, única y exclusivamente, por la
+misma clase.

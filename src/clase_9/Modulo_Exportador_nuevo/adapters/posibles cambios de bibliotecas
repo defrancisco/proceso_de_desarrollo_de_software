@@ -1,0 +1,6 @@
+Para la exportación a Excel se utilizará Apache POI, ya que es una biblioteca sumamente 
+confiable para estos usos. Es probable que se requiera actualizar su versión en un futuro, 
+pero no cambiar a otra biblioteca distinta.  
+En cambio, para la exportación a PDF tendremos como primera opción a Apache PDFBox; 
+pero, como por experiencias anteriores, estas herramientas siempre traen problemas, se 
+deberá́ dejar abierta la posibilidad de reemplazarla por otra biblioteca.  

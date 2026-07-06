@@ -1,0 +1,12 @@
+¿Por qué agregar Facade aquí?
+Mirando el diagrama actual, si el cliente (por ejemplo, un controlador de la interfaz de usuario o una
+API) quiere exportar un documento, tiene que interactuar con demasiados elementos del sistema:
+1. Crear el objeto Documento con sus datos.
+2. Llamar a la fábrica FactoryEstrategiaDeExportacionpasándole el enum y el nombre del archivo
+para que le devuelva la estrategia correcta.
+3. Crear un objeto Exportador.
+4. Configurar el exportador con la estrategia y el documento (setExportable, cambiarEstrategia).
+5. Finalmente, ejecutar exportar().
+Para el cliente es un dolor de cabeza (mucho acoplamiento).
+Facade va a simplificar todo esto, ofreciendo un único punto de entrada limpio. El cliente solo dirá:
+"Fachada, expórtame este mapa de datos a PDF con el nombre 'reporte'"

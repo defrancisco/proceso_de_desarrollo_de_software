@@ -1,0 +1,6 @@
+Ejemplo:
+• Imaginen que tenemos una aplicación de entregas urbanas.
+• El sistema soporta envíos en Camión (Truck) y en Bicicleta (Bicycle).
+• Ambos implementan la interfaz Transport.
+• La versión Simple Factory tiene una sola clase TransportFactory con un switch.
+• El cliente le dice "CAMION" o "BICI" y la fábrica le devuelve el objeto

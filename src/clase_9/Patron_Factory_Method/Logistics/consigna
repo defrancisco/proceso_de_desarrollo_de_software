@@ -1,0 +1,11 @@
+Problemas…
+• El negocio crece y ahora queremos hacer entregas marítimas con un Barco (Ship). ¿Qué pasa?
+Tenemos que abrir la clase TransportFactory, agregar un nuevo case "SHIP" y volver a compilar
+todo
+• Para solucionar el problema, en lugar de una fábrica con un switch que lo sabe todo, creamos una
+estructura donde cada tipo de logística se encarga de crear su propio transporte.
+• Creamos una clase abstracta llamada Logistics(el creador). Esta clase define el Factory Method
+abstracto (createTransport()).
+• Luego, creamos sub-fábricas: RoadLogistics(que sabe crear camiones) y SeaLogistics (que sabe
+crear barcos).
+• Si mañana se añade aviación, nadie toca el código existente; simplemente se crea AirLogistics

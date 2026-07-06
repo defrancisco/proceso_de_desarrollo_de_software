@@ -8,6 +8,7 @@ public class Descuento extends ProductoDecorador {
 
     public Descuento(Producto producto, double porcentaje) {
         super(producto);
+        this.porcentaje = porcentaje;
     }
 
     @Override

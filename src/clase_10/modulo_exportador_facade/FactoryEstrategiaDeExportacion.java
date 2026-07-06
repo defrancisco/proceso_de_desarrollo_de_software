@@ -1,5 +1,11 @@
 package clase_10.modulo_exportador_facade;
 
+import clase_10.modulo_exportador_facade.adapter.AdapterApachePDFBox;
+import clase_10.modulo_exportador_facade.adapter.IAdapterExportadorAPDF;
+import clase_10.modulo_exportador_facade.strategy.ExportarAExcel;
+import clase_10.modulo_exportador_facade.strategy.ExportarAPDF;
+import clase_10.modulo_exportador_facade.strategy.IEstrategiaDeExportacion;
+
 public class FactoryEstrategiaDeExportacion {
 
     public static IEstrategiaDeExportacion crearEstrategia(FormatoDeExportacion formatoDeExportacion, String nombreDelArchivo) {

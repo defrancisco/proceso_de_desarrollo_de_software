@@ -1,0 +1,9 @@
+más flexible y orientado a herencia.
+
+Cómo funciona:
+
+Define una clase abstracta con un método createProduct().
+
+Las subclases deciden qué objeto crear.
+
+Evita modificar código existente cuando se agregan nuevos tipos.

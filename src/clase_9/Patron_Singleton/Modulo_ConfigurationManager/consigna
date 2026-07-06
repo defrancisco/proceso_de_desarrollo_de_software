@@ -1,0 +1,16 @@
+Gestor de configuración del sistema (ConfigurationManager)
+Imaginen que estamos desarrollando una aplicación web grande. Esta aplicación
+necesita leer un archivo de configuración (config.json) al iniciar para saber cómo
+conectarse a la base de datos, qué puerto usar y el idioma del sistema.
+Si cada componente de la aplicación (el módulo de usuarios, el de pagos, el de
+envíos) creara su propia instancia de un gestor de configuración, pasarían dos
+cosas malas:
+1.Desperdicio de memoria: Cargaríamos el mismo archivo en memoria múltiples
+veces de forma idéntica.
+2.Inconsistencia: Si un módulo modifica una propiedad de la configuración en
+tiempo de ejecución, los demás módulos no se enterarían porque tienen su propia
+"copia".
+La solución Singleton: Creamos un único ConfigurationManager. No importa
+cuántas partes de la aplicación lo soliciten, siempre obtendrán la misma y única
+instancia en memoria. El constructor se oculta (se hace privado) para que nadie
+pueda usar el operador new fuera de la clase

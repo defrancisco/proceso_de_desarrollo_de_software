@@ -1,0 +1,25 @@
+Pa
+trones de Diseño / Simple Factory
+
+Encapsula en unúnico punto (una clase)la creación de objetos que tienen, al menos, una interfaz
+común
+
+Se sugiere su utilización cuando:
+• Se requiere instanciar una clase distinta (con al menos una interfaz común) según el resultado de
+alguna condición o según el valor de una variable, en varias partes del proyecto; y dichas clases
+pueden ser consideradas “complejas” de instanciar o necesitan “mucha configuración” para
+funciona
+
+
+Componentes:
+Los componentesson los mismos que tiene el patrón Factory method,con la salvedad que seagrega
+un componentemás:
+• Clase Factory: Clase concreta que tiene la responsabilidad exclusiva de instanciar una de entre
+varias clases, según algún parámetro y/o condición más compleja. Esta clase puede tener varios
+métodos (internos/privados) que colaboren en la creación de los diferentes objetos. En pocas
+palabras: contiene el “Factorymethod”.
+• Ladiferencia es que:
+• Simple Factory: Es una sola clase con un método estático (un "creador centralizado"). Usa un if/else o
+switch para decidir qué objeto crear.Es más bien un modismodeprogramación.
+• Factory Method: Es un patrón de diseño oficial. Utiliza la herencia y el polimorfismo. La clase creadora
+principal es abstractay delega la responsabilidad de la creación a sus subclases

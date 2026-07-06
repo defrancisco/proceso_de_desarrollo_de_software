@@ -1,5 +1,7 @@
 package clase_10.modulo_exportador_facade;
 
+import clase_10.modulo_exportador_facade.strategy.IEstrategiaDeExportacion;
+
 public class Exportador {
     private IEstrategiaDeExportacion estrategia;
     private IExportable documentoAExportar;

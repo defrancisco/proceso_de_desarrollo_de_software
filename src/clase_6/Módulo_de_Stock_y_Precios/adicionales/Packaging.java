@@ -7,7 +7,9 @@ public class Packaging extends ProductoDecorador {
     private Double costoPackaging;
 
     public Packaging(Producto producto, double costoPackaging) {
+
         super(producto);
+        this.costoPackaging = costoPackaging;
     }
 
     @Override
