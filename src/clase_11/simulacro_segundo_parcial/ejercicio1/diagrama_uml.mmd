@@ -1,0 +1,81 @@
+classDiagram
+
+    Carga compuesta PaqueteSimple y ContenedorCompuesto
+    mi comoponente
+    class iPaquete{
+        <<interface>>
+        +getPeso() double
+        +getCosto() double
+    }
+
+    mi hoja
+    class PaqueteIndividual{
+        -pesoKG double
+        -costoBaseDeEnvio double
+        +getPeso() double
+        +getCosto() double
+    }
+
+    composite
+    class Compuesto{
+        -List<iPaquete>
+        +getPeso() double
+        +getCosto() double
+        +agregarPaquete(iPaquete paquete)
+        +eliminarPaquete(iPaquete paquete)
+    }
+
+
+    Adicionales dinámicos Prioritario y Refrigeración
+    class PaqueteDecorador{
+        <<abstract>>
+        carga protected
+
+        +void PaqueteDecorador()
+        +getPeso() double
+        +getCosto() double
+
+
+
+    }
+
+    class EnvioPrioritario{
+        -int costoFijo = 1500
+
+
+        +getPeso() double
+        +getCosto() double
+
+    }
+
+    class RefrigeraciónCadenaDeFrio{
+        -int recargo = 0.25
+        +getPeso() double
+        +getCosto() double
+    }
+
+    Creación centralizada SIMPLY FACTORY
+    class FormatoCarga{
+        +crearCarga(FormatoCarga tipo) static iPaquete
+    }
+
+    class TipodeCarga{
+        <<ENUM>>
+        SIMPLE,
+        COMPUESTO
+    }
+
+
+
+iPaquete ..> PaqueteIndividual : implements
+iPaquete ..> Compuesto : implements
+Compuesto ..> iPaquete : envuelve
+iPaquete ..> PaqueteDecorador : implements
+PaqueteDecorador ..> EnvioPrioritario : extends
+PaqueteDecorador ..>  RefrigeraciónCadenaDeFrio : extends
+FormatoCarga ..> iPaquete
+FormatoCarga ..> TipodeCarga
+
+
+NOTAS
+Los adicionales deben implementar iPaquete directamente porque son Decorators que se comportan como cargas

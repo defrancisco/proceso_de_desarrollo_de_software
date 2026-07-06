@@ -1,0 +1,20 @@
+Composite:
+
+iPaquete como interfaz común.
+
+PaqueteIndividual como Leaf.
+
+Compuesto como Composite que contiene una lista de iPaquete.
+✔ Esto refleja perfectamente la regla de negocio: contenedores que pueden agrupar paquetes y otros contenedores.
+
+Decorator:
+
+PaqueteDecorador como clase abstracta que implementa iPaquete y envuelve otra carga.
+
+EnvioPrioritario y RefrigeraciónCadenaDeFrio extienden el decorador y redefinen getCosto().
+✔ Esto permite añadir dinámicamente costos adicionales sin romper el polimorfismo.
+
+Simple Factory:
+
+FormatoCarga con un método estático crearCarga(TipodeCarga tipo) que devuelve instancias de PaqueteIndividual o Compuesto.
+✔ Esto cumple la restricción de que el cliente no puede usar new.
