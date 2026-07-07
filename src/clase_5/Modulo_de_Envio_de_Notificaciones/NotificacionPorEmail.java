@@ -5,7 +5,7 @@ import clase_5.Modulo_de_Envio_de_Notificaciones.email.AdapterNotificadorEmail;
 public class NotificacionPorEmail implements EstrategiaDeNotificacion {
     private AdapterNotificadorEmail adapter;
 
-    public void  setAdapter(AdapterNotificadorEmail adapter) {
+    public void setAdapter(AdapterNotificadorEmail adapter) {
         this.adapter = adapter;
     }
 

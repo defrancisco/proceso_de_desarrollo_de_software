@@ -1,4 +1,4 @@
-package ejercicio3;
+package simulacro_parcial2.ejercicio2;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package clase_5.Modulo_de_Envio_de_Notificaciones.test;
+package simulacro_parcial2.ejercicio1;
 
 public class Main {
     public static void main(String[] args) {
