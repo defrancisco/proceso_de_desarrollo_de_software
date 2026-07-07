@@ -1,0 +1,11 @@
+public abstract class TransportFactory {
+
+    public abstract Transporte createTransport();
+
+}
+
+Esa versión no tiene métodos estáticos y se usa así:
+
+TransportFactory factory = new NaveFactory();
+
+Transporte t = factory.createTransport();
