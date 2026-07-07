@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/RecuperatorioSegundoParcial/RecuperatorioSegundoParcial.iml" filepath="$PROJECT_DIR$/RecuperatorioSegundoParcial/RecuperatorioSegundoParcial.iml" />
       <module fileurl="file://$PROJECT_DIR$/pds.iml" filepath="$PROJECT_DIR$/pds.iml" />
     </modules>
   </component>
