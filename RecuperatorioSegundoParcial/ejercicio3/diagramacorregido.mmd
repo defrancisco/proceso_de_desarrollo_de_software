@@ -1,0 +1,31 @@
+classDiagram
+    class ItemDeObra {
+        <<interface>>
+        +calcularCosto() double
+    }
+
+    class Presupuesto {
+        +calcularTotal() double
+    }
+
+    class Tarea {
+        -double costoPropio
+        +calcularCosto() double
+    }
+
+    class Rubro {
+        -List~ItemDeObra~ hijos
+        +agregar(ItemDeObra i) void
+        +quitar(ItemDeObra i) void
+        +calcularCosto() double
+    }
+
+%% Relaciones del patrón Composite
+    ItemDeObra <|.. Tarea : Implements (Leaf)
+    ItemDeObra <|.. Rubro : Implements (Composite)
+
+%% Relación de agregación: Rubro contiene 0 a n ItemDeObra
+Rubro o-- "0..*" ItemDeObra : contiene
+
+%% El cliente solo conoce la abstracción
+Presupuesto ..> "1..*" ItemDeObra : depende de
