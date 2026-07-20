@@ -1,0 +1,87 @@
+classDiagram
+%% ==========================================
+%% CLIENTE
+%% ==========================================
+    class Cliente {
+        <<actor>>
+    }
+
+%% ==========================================
+%% PATRÓN FACADE
+%% ==========================================
+    class FacadeAgenciaDeViajes {
+        -servicioVuelos : ServicioVuelos
+        -servicioHoteles : ServicioHoteles
+        -servicioTraslados : ServicioTraslados
+        -servicioNotif : ServicioNotificaciones
+        -medioDePagoFactory : MedioDePagoFactory
+        +reservarPaquete(cliente, origen, destino, fIda, fVuelta, tipoPago) void
+    }
+
+%% SUBSISTEMAS COMPLEJOS
+    class ServicioVuelos {
+        +buscarVuelo(origen, destino, fecha)
+        +reservarVuelo()
+    }
+    class ServicioHoteles {
+        +buscarHotel(ciudad, fecha)
+        +reservarHabitacion()
+    }
+    class ServicioTraslados {
+        +reservarTransfer(aeropuerto, hotel)
+    }
+    class ServicioNotificaciones {
+        +enviarItinerario(cliente, detalle)
+    }
+
+%% ==========================================
+%% PATRÓN FACTORY
+%% ==========================================
+    class MedioDePagoFactory {
+        +crearMedioDePago(tipoPago: String) MedioDePago
+    }
+
+%% ==========================================
+%% PATRÓN STRATEGY
+%% ==========================================
+    class MedioDePago {
+        <<interface>>
+        +pagar(monto: double) void
+    }
+
+    class TarjetaDeCredito {
+        +pagar(monto: double) void
+    }
+    class TransferenciaBancaria {
+        +pagar(monto: double) void
+    }
+    class BilleteraVirtual {
+        +pagar(monto: double) void
+    }
+
+%% ==========================================
+%% RELACIONES Y MULTIPLICIDADES
+%% ==========================================
+
+%% El Cliente solo habla con el Facade (Dependencia)
+    Cliente ..> "1" FacadeAgenciaDeViajes : usa
+
+%% El Facade conoce 1 instancia de cada subsistema (Asociación Dirigida)
+    FacadeAgenciaDeViajes --> "1" ServicioVuelos : delega
+    FacadeAgenciaDeViajes --> "1" ServicioHoteles : delega
+    FacadeAgenciaDeViajes --> "1" ServicioTraslados : delega
+    FacadeAgenciaDeViajes --> "1" ServicioNotificaciones : delega
+
+%% El Facade se asocia con el Factory para crear la estrategia
+    FacadeAgenciaDeViajes --> "1" MedioDePagoFactory : solicita creación
+
+%% El Facade usa la interfaz Strategy para ejecutar el pago (Asociación)
+    FacadeAgenciaDeViajes --> "1..*" MedioDePago : ejecuta pago
+
+%% El Factory depende de la interfaz/clases concretas para instanciarlas (Dependencia de Creación)
+    MedioDePagoFactory ..> "1" MedioDePago : <<create>>
+
+%% Realización de la estrategia (Implements)
+    MedioDePago <|.. TarjetaDeCredito : Implements
+    MedioDePago <|.. TransferenciaBancaria : Implements
+    MedioDePago <|.. BilleteraVirtual : Implements
