@@ -1,8 +1,13 @@
 package ejercicio1.AdicionalesCombinables;
 
 import ejercicio1.DecoradorCoberturas;
+import ejercicio1.Poliza;
 
 public class CoberturaContraRobo extends DecoradorCoberturas {
+
+    public CoberturaContraRobo(Poliza poliza) {
+        super(poliza);
+    }
 
     @Override
     public double calcularPrima() {

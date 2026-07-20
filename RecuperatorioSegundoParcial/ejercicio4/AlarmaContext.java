@@ -11,10 +11,13 @@ public class AlarmaContext implements iObservables, iEstadosAlarma {
     private iEstadosAlarma estadosActual; // Patron State
     private List<iObserver> observers; // Patron Observer
     private static AlarmaContext instance = null; // Patron Singleton
+    private final int pinCorrecto = 1234; // Contraseña
+
 
     // Constructor en Privado
     private AlarmaContext() {
-        this.estadosActual = new Desarmado();
+        // Al instanciar, pasamos 'this' (el contexto) al estado inicial
+        this.estadosActual = new Desarmado(this);
         this.observers = new ArrayList<>();
     }
 
@@ -33,20 +36,28 @@ public class AlarmaContext implements iObservables, iEstadosAlarma {
         this.estadosActual = estadoNuevo;
 
     }
+    // AGREGO EL MÉTODO PARA SETEAR EL PIN
+    public int getPinCorrecto() {
+        return pinCorrecto;
+    }
 
+
+    // Delegación del Patrón State
     @Override
     public void sensorActivado(){
-        this.estadosActual.sensorActivado();
+        estadosActual.sensorActivado();
     }
 
     @Override
     public void armar(){
-        this.estadosActual.armar();
+
+        estadosActual.armar();
     }
 
     @Override
     public void desarmar(int pin){
-        this.estadosActual.desarmar(pin);
+
+        estadosActual.desarmar(pin);
     }
 
 

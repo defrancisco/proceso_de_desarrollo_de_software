@@ -4,12 +4,20 @@ public abstract class DecoradorCoberturas implements Poliza {
 
     protected Poliza poliza;
 
-    public double getPrimaBase() {
-        return poliza.calcularPrima();
+
+    // RECORDAR EL CONSTRUCTOR DEL DECORADOR
+    public DecoradorCoberturas(Poliza poliza){
+        this.poliza = poliza;
     }
 
-    public String getDescripcion() {
-        return poliza.descripcion();
+    @Override
+    public double calcularPrima() {
+        return poliza.calcularPrima(); // Delega en la póliza envuelta
+    }
+
+    @Override
+    public String descripcion() {
+        return poliza.descripcion(); // Delega en la póliza envuelta
     }
 
 }

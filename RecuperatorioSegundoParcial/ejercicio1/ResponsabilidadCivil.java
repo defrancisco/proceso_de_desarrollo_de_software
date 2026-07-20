@@ -3,12 +3,14 @@ package ejercicio1;
 
 // Poliza base ---> Debería heredar de una interfaz inicial para heredar
 public class ResponsabilidadCivil implements Poliza {
-    private double primaBase = 5000;
+    private double primaBase = 5000.0;
 
     @Override
     public double calcularPrima() {
         return primaBase;
     }
+
+    @Override
     public String descripcion() {
         return "Responsabilidad Civil"; }
 
