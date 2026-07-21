@@ -7,7 +7,7 @@ public abstract class Logistics {
     // ESTE ES EL FACTORY METHOD ORIGINAL
     public abstract Transport createTransport();
 
-    public void planDelivery(){
+    public void planDelivery(String destino){
         // Llama al método de fábrica para crear el objeto sin saber cuál es exactamente
         Transport transport = createTransport();
         System.out.println("Preparando la logística de envío...");
